@@ -1,0 +1,83 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.6'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'top.belovedyaoo'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Spring Web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Spring Validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // AspectJ
+    implementation 'org.aspectj:aspectjrt:1.9.19'
+
+    // AspectJ Weaver
+    implementation 'org.aspectj:aspectjweaver:1.9.19'
+    annotationProcessor 'org.aspectj:aspectjweaver:1.9.19'
+
+    // Reflections, 仓库地址: https://github.com/ronmamo/reflections
+    implementation 'org.reflections:reflections:0.10.2'
+
+    // MySQL Driver
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // MyBatis-Flex
+    implementation 'com.mybatis-flex:mybatis-flex-spring-boot-starter:1.9.3'
+    annotationProcessor 'com.mybatis-flex:mybatis-flex-processor:1.9.3'
+
+    // Auto Table, 官方文档: https://autotable.tangzc.com/
+    implementation 'com.tangzc:auto-table-spring-boot-starter:1.8.3'
+
+    // MyBatis-Flex + Auto Table的拓展包, 仓库地址: https://gitee.com/tangzc/mybatis-flex-ext
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Sa-Token
+    implementation 'cn.dev33:sa-token-spring-boot-starter:1.39.0'
+
+    // Sa-Token 整合 Redis （使用 jackson 序列化方式）
+    implementation 'cn.dev33:sa-token-redis-jackson:1.39.0'
+
+    // Sa-Token 整合 jwt
+    implementation 'cn.dev33:sa-token-jwt:1.39.0'
+
+    // Jedis
+    implementation 'redis.clients:jedis:5.0.2'
+
+    // Jackson Core
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.17.1'
+
+    // Jackson Annotations
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.17.1'
+
+    // Jackson Databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.1'
+
+    // HuTool
+    implementation 'cn.hutool:hutool-all:5.8.32'
+
+}
