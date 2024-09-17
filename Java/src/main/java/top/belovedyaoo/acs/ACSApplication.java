@@ -1,5 +1,6 @@
 package top.belovedyaoo.acs;
 
+import com.tangzc.autotable.springboot.EnableAutoTable;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author BelovedYaoo
  * @version 1.0
  */
+@EnableAutoTable
 @SpringBootApplication
 public class ACSApplication {
 
