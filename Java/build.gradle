@@ -57,7 +57,7 @@ dependencies {
     implementation 'com.tangzc:auto-table-spring-boot-starter:1.8.3'
 
     // MyBatis-Flex + Auto Table的拓展包, 仓库地址: https://gitee.com/tangzc/mybatis-flex-ext
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'E:\\个人文档\\项目\\Lib\\mybatis-flex-ext', include: ['*.jar'])
 
     // Sa-Token
     implementation 'cn.dev33:sa-token-spring-boot-starter:1.39.0'
@@ -82,5 +82,8 @@ dependencies {
 
     // HuTool
     implementation 'cn.hutool:hutool-all:5.8.32'
+
+    // OK HTTPS
+    implementation 'com.ejlchina:okhttps:3.1.1'
 
 }
